@@ -13,3 +13,9 @@ This isn't just a school project; it’s a necessary product for the future.
 ● Social Media Protection: Imagine an Instagram filter, but for audio. It automatically "cloaks" your voice before you post a Story.
 ● Protecting Artists: Singers and voice actors can release demos without fear of their livelihood being stolen by AI.
 ● Political Security: Preventing politicians' speeches from being harvested to create fake news and disinformation campaigns.
+
+Feature Category--Adversarial Objective
+Phase Relations--Destabilize STFT phase consistency.
+Jitter & Shimmer--Introduce unnatural micro-fluctuations.
+Harmonic Ratios--Mask spectral signatures required for cloning.
+Source-Filter--Disrupt glottal flow to force robotic output.
