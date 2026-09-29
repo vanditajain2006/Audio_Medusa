@@ -1,0 +1,14 @@
+# 1. Clone the repository
+!git clone https://github.com/huawei-noah/Speech-Backbones.git
+%cd Speech-Backbones/DiffVC
+
+# 2. Fix dependencies (The Nuclear Option)
+!sed -i -e '/torch/d' -e '/librosa/d' -e '/numpy/d' -e '/scipy/d' requirements.txt
+!sed -i 's/==.*//' requirements.txt
+!pip install -r requirements.txt
+
+# 3. Patch the internal audio.py file for modern librosa compatibility
+!sed -i 's/librosa.resample(wav, source_sr, sampling_rate)/librosa.resample(y=wav, orig_sr=source_sr, target_sr=sampling_rate)/g' /content/Speech-Backbones/DiffVC/speaker_encoder/encoder/audio.py
+!sed -i 's/librosa.feature.melspectrogram(wav, sampling_rate,/librosa.feature.melspectrogram(y=wav, sr=sampling_rate,/g' /content/Speech-Backbones/DiffVC/speaker_encoder/encoder/audio.py
+
+print("\nEnvironment ready. Restart the session (Runtime -> Restart session) if you haven't already.")
