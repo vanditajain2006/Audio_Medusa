@@ -1,0 +1,22 @@
+# Environments
+venv/
+env/
+.env
+
+# Cache and downloaded models
+.tts_cache/
+pretrained_models/
+__pycache__/
+*.pyc
+
+# Data and generated outputs
+*.wav
+audio_samples/
+audio_samples_5/
+experiments_v2/
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
